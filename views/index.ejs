@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <form action="/todos" method="post">
+      <input type="text" name="todoItem" id="todo-item" />
+      <button type="submit" id="add-todo-btn">Add</button>
+    </form>
+
+    <ul id="todo-container">
+      <% todos.forEach((todo, index) => { %>
+      <li><%= todo %> <a href="/todos/edit/<%= index  %>">edit</a></li>
+      <% }) %>
+      <!-- Render Todos Here -->
+    </ul>
+  </body>
+</html>
